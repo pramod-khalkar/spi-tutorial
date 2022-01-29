@@ -5,8 +5,8 @@ One dictionary interface api's having two providers "general dictionary" and "ex
 
 Run below task to generate JAR's 
 
-Dictionary api : ./gradle prepareApiJar
+Dictionary api : `./gradle prepareApiJar`
 
-General dictionary provider : ./gradle preGeneralDicJar
+General dictionary provider : `./gradle preGeneralDicJar`
 
-Extended dictionary provider : ./gradle preExtendedDicjar
+Extended dictionary provider : `./gradle preExtendedDicjar`
