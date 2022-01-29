@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.tutorial.spi'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation name: 'dictionary-api-1.0-SNAPSHOT'
+    //implementation name: 'general-dictionary-1.0-SNAPSHOT'
+    implementation name: 'extended-dictionary-1.0-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}

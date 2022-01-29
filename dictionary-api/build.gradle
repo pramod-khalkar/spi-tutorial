@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'tutorial.spi.api'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+task prepareApiJar(type: Jar) {
+    manifest {
+        attributes 'Implementation-Version': project.version
+        //attributes 'Main-Class': 'org.pk.work.AppLauncher'
+    }
+    enabled = true
+    baseName  'dictionary-api'
+    from sourceSets.main.output
+    destinationDir(file("../libs"))
+    //include 'org/pk/work/**'
+}
+
+test {
+    useJUnitPlatform()
+}

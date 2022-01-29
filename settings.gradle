@@ -1,0 +1,5 @@
+rootProject.name = 'spi-tutorial'
+include 'dictionary-api'
+include 'general-dictionary'
+include 'extended-dictionary'
+
